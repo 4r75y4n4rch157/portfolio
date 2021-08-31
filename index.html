@@ -10,7 +10,8 @@
 	<body>
 		<script src="js/three.js"></script>
 		<script>
-        import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/GLTFLoader.js';
+            const scene = new THREE.Scene();
+            import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/GLTFLoader.js';
 
 			const gltfLoader = new GLTFLoader();
             const url = 'Assets/a_portrait_from_the_future/scene.gltf';
