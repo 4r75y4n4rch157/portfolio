@@ -18,7 +18,7 @@
             //const renderer = new THREE.WebGLRenderer({ canvas: BasicCanvas });
             //renderer.setSize( window.innerWidth, window.innerHeight );
             //document.body.appendChild( renderer.domElement );
-            
+            fetch('https://github.com/4r75y4n4rch157/portfolio/tree/master/Assets/a_portrait_from_the_future.gltf/allow-cors', {mode:'cors'})
                 const loader = new GLTFLoader();
                 loader.load( './4r75y4n4rch157/portfolio/tree/master/Assets/a_portrait_from_the_future.gltf', function ( gltf ) {
                     scene.add( gltf.scene );
