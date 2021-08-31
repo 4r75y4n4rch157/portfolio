@@ -6,9 +6,9 @@
 	</head>
 	<body>
 
-		<script src="js/three.js">import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';</script>
+		<script src="js/three.js"></script>
 		<script>
-            const loader = new GLTFLoader();
+            const loader = new THREE.GLTFLoader();
             loader.load( 'path/to/model.glb', function ( gltf ) {
                 scene.add( gltf.scene );}, undefined, function ( error ) {
                 console.error( error );
