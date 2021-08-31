@@ -6,7 +6,7 @@
 	</head>
 	<body>
 
-		<script src="js/three.js"></script>
+		<script src="js/three.js">import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';</script>
 		<script>
             const loader = new GLTFLoader();
             loader.load( 'Assets/a_portrait_from_the_future/scene.gltf', function ( gltf ) {
