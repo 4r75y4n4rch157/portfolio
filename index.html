@@ -21,7 +21,7 @@
             //document.body.appendChild( renderer.domElement );
             
                 const loader = new GLTFLoader();
-                loader.load( 'https://github.com/4r75y4n4rch157/portfolio/tree/master/Assets/quantum_cube', function ( gltf ) {
+                loader.load( url, 'https://github.com/4r75y4n4rch157/portfolio/tree/master/Assets/quantum_cube', function ( gltf ) {
                     scene.add( gltf.scene );
                         gltf.animations; // Array<THREE.AnimationClip>
                         gltf.scene; // THREE.Group
