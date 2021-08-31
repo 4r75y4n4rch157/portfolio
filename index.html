@@ -3,10 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Index Node</title>
+        <style>
+			body { margin: 0; }
+		</style>
 	</head>
 	<body>
 
 		<script src="js/three.js">
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        document.body.appendChild( renderer.domElement );
             import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
             const loader = new GLTFLoader();
             loader.load( 'Assets/a_portrait_from_the_future.gltf', function ( gltf ) {
