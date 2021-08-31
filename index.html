@@ -11,7 +11,6 @@
         
 		<script type="module">
             import THREE from 'https://cdn.skypack.dev/three';
-            //import * as THREE from '/js/three.module.js';
             import { GLTFLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/GLTFLoader.js';
             var canvas = document.getElementById("BasicCanvas");
             //const scene = new THREE.Scene();
@@ -21,7 +20,7 @@
             //document.body.appendChild( renderer.domElement );
             
                 const loader = new GLTFLoader();
-                loader.load( 'https://github.com/4r75y4n4rch157/portfolio/tree/master/Assets/a_portrait_from_the_future', function ( gltf ) {
+                loader.load( './4r75y4n4rch157/portfolio/tree/master/Assets/a_portrait_from_the_future.gltf', function ( gltf ) {
                     scene.add( gltf.scene );
                         gltf.animations; // Array<THREE.AnimationClip>
                         gltf.scene; // THREE.Group
