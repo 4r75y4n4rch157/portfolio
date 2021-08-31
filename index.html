@@ -3,22 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Index Node</title>
-		<style>
-			body { margin: 0; }
-		</style>
 	</head>
 	<body>
-		<script src="js/three.js"></script>
-		<script>
-            const scene = new THREE.Scene();
-            import {GLTFLoader} from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/examples/jsm/loaders/GLTFLoader.js';
 
-			const gltfLoader = new GLTFLoader();
-            const url = 'Assets/a_portrait_from_the_future/scene.gltf';
-            gltfLoader.load(url, (gltf) =>{
-                const root = gltf.scene;
-                scene.add(root);
-            })
+		<script src="js/three.js">import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';</script>
+		<script>
+            const loader = new GLTFLoader();
+            loader.load( 'path/to/model.glb', function ( gltf ) {
+                scene.add( gltf.scene );}, undefined, function ( error ) {
+                console.error( error );
+            } );
 		</script>
 	</body>
 </html>
