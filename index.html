@@ -17,6 +17,12 @@
             init();
 
             function init() {
+                const loader = new GLTFLoader();
+                loader.load( 'https://github.com/4r75y4n4rch157/portfolio/tree/master/Assets/quantum_cube', function ( gltf ) {
+                    scene.add( gltf.scene );
+                    }, undefined, function ( error ) {
+                    console.error( error );
+                } );
 
                 camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
                 camera.position.z = 1;
