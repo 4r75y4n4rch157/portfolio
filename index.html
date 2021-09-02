@@ -23,7 +23,7 @@
             
             function init() {
                 const loader = new GLTFLoader();
-                loader.load( '/Assets/MirrorMove.mp4', function ( gltf ) {
+                loader.load( '/Assets/quantum_cube', function ( gltf ) {
                     scene.add( gltf.scene )});
 
                 camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
