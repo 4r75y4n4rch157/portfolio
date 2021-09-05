@@ -41,6 +41,7 @@
                 const lineGeo = new THREE.BufferGeometry().setFromPoints( allPoints );
                 const line = new THREE.Line( lineGeo, matCo );
                 scene.add( line );
+                renderer.render( scene, camera );
             }
 
             function animation( time ) {
