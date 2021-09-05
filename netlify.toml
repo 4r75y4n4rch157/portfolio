@@ -1,6 +1,6 @@
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
-  for = "/index.html"
+  for = "https://conklin.tech"
     [headers.values]
     Access-Control-Allow-Origin = "*"
