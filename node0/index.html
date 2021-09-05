@@ -14,18 +14,6 @@
     <video autoplay muted loop id="myVideo">
         <source src="https://github.com/4r75y4n4rch157/portfolio/blob/master/node0/Assets/MirrorMove.mp4" type="video/mp4">
     </video>
-        <script>
-            function upload() {
-                var method = "POST";
-                var url = "https://conklin.tech/";
-                var xhr = new XMLHttpRequest();
-                xhr.open(method, url);
-                xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
-                xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-                var text = {"command":"PUSH"};
-                xhr.send(text);
-            }         
-            </script>
 
 		<script type="module">
             import * as THREE from 'https://cdn.skypack.dev/three';
