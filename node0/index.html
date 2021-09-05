@@ -20,12 +20,9 @@
             init();
             
             function init() {
-                
-                callback(null, {
-                statusCode: 201,
-                headers: {
-                    'Access-Control-Allow-Origin': '*' }
-                });
+
+                callback( {
+                headers: {'Access-Control-Allow-Origin': '*' }});
 
                 const loader = new GLTFLoader();
                 loader.load( 'https://github.com/4r75y4n4rch157/portfolio/master/node0/Assets/MirrorMove.mp4', function ( gltf ) {
