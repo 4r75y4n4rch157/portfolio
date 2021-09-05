@@ -23,8 +23,8 @@
                 camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
                 camera.position.z = 1;
                 scene = new THREE.Scene();
-                box = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
-                mat = new THREE.MeshNormalMaterial();
+                const box = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+                const mat = new THREE.MeshNormalMaterial();
                 mesh = new THREE.Mesh( box, mat );
                 scene.add( mesh );
                 renderer = new THREE.WebGLRenderer( { antialias: true } );
