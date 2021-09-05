@@ -13,7 +13,7 @@
         <script>
             function upload() {
                 var method = "POST";
-                var url = "http://conklin.tech";
+                var url = "https://conklin.tech/";
                 var xhr = new XMLHttpRequest();
                 xhr.open(method, url);
                 xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
@@ -30,7 +30,7 @@
             let geometry, material, mesh;
             upload();
             init();
-            
+
             function init() {
                 const loader = new GLTFLoader();
                 loader.load( 'https://github.com/4r75y4n4rch157/portfolio/master/node0/Assets/MirrorMove.mp4', function ( gltf ) {
