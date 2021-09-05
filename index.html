@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,8 +9,12 @@
         
 	</head>
 	<body>
+
+        <?php
+            header( Access-Control-Allow-Origin: https://github.com/4r75y4n4rch157/portfolio);
+        ?>
 		<script type="module">
-            myHeaders.set( Access-Control-Allow-Origin , 'https://github.com/4r75y4n4rch157/portfolio.git');
+            myHeaders.set( Access-Control-Allow-Origin , 'https://github.com/4r75y4n4rch157/portfolio.git' );
             import { GLTFLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/GLTFLoader.js';
             import * as THREE from 'https://cdn.skypack.dev/three';
 
