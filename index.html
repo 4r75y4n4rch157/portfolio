@@ -13,8 +13,8 @@
         <?php
             header( Access-Control-Allow-Origin: https://github.com/4r75y4n4rch157/portfolio);
         ?>
+
 		<script type="module">
-            myHeaders.set( Access-Control-Allow-Origin , 'https://github.com/4r75y4n4rch157/portfolio.git' );
             import { GLTFLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/GLTFLoader.js';
             import * as THREE from 'https://cdn.skypack.dev/three';
 
@@ -25,7 +25,7 @@
             
             function init() {
                 const loader = new GLTFLoader();
-                loader.load( 'https://github.com/4r75y4n4rch157/portfolio.git', function ( gltf ) {
+                loader.load( 'https://github.com/4r75y4n4rch157/portfolio/blob/master/Assets/skull_downloadable/scene.gltf', function ( gltf ) {
                     scene.add( gltf.scene )});
 
                 camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
