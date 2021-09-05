@@ -10,14 +10,8 @@
         
 	</head>
 	<body>
-        <!-- The video -->
-    <video autoplay muted loop id="myVideo">
-        <source src="/MirrorMove.mp4" type="video/mp4">
-    </video>
-
 		<script type="module">
             import * as THREE from 'https://cdn.skypack.dev/three';
-            import { GLTFLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/GLTFLoader.js';
 
             let camera, scene, renderer;
             let geometry, material, mesh;
@@ -25,10 +19,7 @@
             init();
 
             function init() {
-                const loader = new GLTFLoader();
-                loader.load( 'https://github.com/4r75y4n4rch157/portfolio/master/node0/Assets/MirrorMove.mp4', function ( gltf ) {
-                    scene.add( gltf.scene )});
-
+               
                 camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
                 camera.position.z = 1;
                 scene = new THREE.Scene();
@@ -40,11 +31,21 @@
                 renderer.setSize( window.innerWidth, window.innerHeight );
                 renderer.setAnimationLoop( animation );
                 document.body.appendChild( renderer.domElement );
+
+                const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+                const points = [];
+                points.push( new THREE.Vector3( - 10, 0, 0 ) );
+                points.push( new THREE.Vector3( 0, 10, 0 ) );
+                points.push( new THREE.Vector3( 10, 0, 0 ) );
+
+                const geometry = new THREE.BufferGeometry().setFromPoints( points );
+                const line = new THREE.Line( geometry, material );
             }
 
             function animation( time ) {
                 mesh.rotation.x = time / 2000;
                 mesh.rotation.y = time / 1000;
+                scene.add( line );
                 renderer.render( scene, camera );
             }
          </script>
