@@ -42,8 +42,13 @@
                 const geometry = new THREE.BufferGeometry().setFromPoints( points );
                 const line = new THREE.Line( geometry, material );
 
+                const vec = new THREE.Vector3();
+                const vec2 = new THREE.Vector3();
+                vec.lerp(vec2, 0.1)
+
                 scene.add( line );
                 renderer.render( scene, camera );
+                
             }
 
             function init() {
