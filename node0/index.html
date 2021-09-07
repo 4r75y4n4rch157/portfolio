@@ -46,6 +46,18 @@
                 const vec2 = new THREE.Vector3();
                 vec.lerp(vec2, 0.1)
 
+                const Scene = ({ x, y, z }) => {
+                const box = useRef();
+                const vec = new THREE.Vector3(x, y, z);
+                return (
+                    useFrame(() => group.current.position.lerp(vec, 0.1)));
+                    return (
+                        <Box ref={box}>
+                        <meshLambertMaterial attach="material" color="white" />
+                        </Box>
+                    );
+                };
+
                 scene.add( line );
                 renderer.render( scene, camera );
                 
